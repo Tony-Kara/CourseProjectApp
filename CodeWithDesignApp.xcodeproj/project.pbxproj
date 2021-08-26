@@ -13,6 +13,8 @@
 		040AEC1426D7C132008B2F4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEBFF26D7C12C008B2F4F /* ContentView.swift */; };
 		040AEC1526D7C132008B2F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040AEC0026D7C132008B2F4F /* Assets.xcassets */; };
 		040AEC1626D7C132008B2F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040AEC0026D7C132008B2F4F /* Assets.xcassets */; };
+		040AEC2026D7DDB7008B2F4F /* CourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */; };
+		040AEC2226D7EEDA008B2F4F /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC2126D7EEDA008B2F4F /* CoursesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		040AEC0D26D7C132008B2F4F /* CodeWithDesignApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeWithDesignApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		040AEC0F26D7C132008B2F4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		040AEC1026D7C132008B2F4F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRow.swift; sourceTree = "<group>"; };
+		040AEC2126D7EEDA008B2F4F /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 		040AEBFD26D7C12C008B2F4F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */,
+				040AEC2126D7EEDA008B2F4F /* CoursesView.swift */,
 				040AEBFE26D7C12C008B2F4F /* CodeWithDesignAppApp.swift */,
 				040AEBFF26D7C12C008B2F4F /* ContentView.swift */,
 				040AEC0026D7C132008B2F4F /* Assets.xcassets */,
@@ -188,7 +194,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				040AEC1326D7C132008B2F4F /* ContentView.swift in Sources */,
+				040AEC2026D7DDB7008B2F4F /* CourseRow.swift in Sources */,
 				040AEC1126D7C132008B2F4F /* CodeWithDesignAppApp.swift in Sources */,
+				040AEC2226D7EEDA008B2F4F /* CoursesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
