@@ -15,6 +15,7 @@
 		040AEC1626D7C132008B2F4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040AEC0026D7C132008B2F4F /* Assets.xcassets */; };
 		040AEC2026D7DDB7008B2F4F /* CourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */; };
 		040AEC2226D7EEDA008B2F4F /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC2126D7EEDA008B2F4F /* CoursesView.swift */; };
+		040AEC2426D7F377008B2F4F /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC2326D7F377008B2F4F /* SideBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		040AEC1026D7C132008B2F4F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRow.swift; sourceTree = "<group>"; };
 		040AEC2126D7EEDA008B2F4F /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
+		040AEC2326D7F377008B2F4F /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */,
 				040AEC2126D7EEDA008B2F4F /* CoursesView.swift */,
+				040AEC2326D7F377008B2F4F /* SideBar.swift */,
 				040AEBFE26D7C12C008B2F4F /* CodeWithDesignAppApp.swift */,
 				040AEBFF26D7C12C008B2F4F /* ContentView.swift */,
 				040AEC0026D7C132008B2F4F /* Assets.xcassets */,
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040AEC2426D7F377008B2F4F /* SideBar.swift in Sources */,
 				040AEC1326D7C132008B2F4F /* ContentView.swift in Sources */,
 				040AEC2026D7DDB7008B2F4F /* CourseRow.swift in Sources */,
 				040AEC1126D7C132008B2F4F /* CodeWithDesignAppApp.swift in Sources */,

@@ -10,9 +10,10 @@ import SwiftUI
 struct CoursesView: View {
     var body: some View {
         List(0 ..< 20) { item in
-            CourseRow()
+            CourseRow() //Embed in list to create the list and add the .liststyle
         }
         .listStyle(InsetGroupedListStyle()) // This will give different styles for the list view
+        .navigationTitle("Courses")
     }
 }
 
