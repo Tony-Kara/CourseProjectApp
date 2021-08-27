@@ -14,14 +14,25 @@ struct CoursesView: View {
             CourseItem()
                 .frame(width: 335, height: 250)
             
-            if show { // this is set to false by default and will not show by default
-                CourseItem()
+            VStack {
+                
+                if show { // this is set to false by default and will not show by default
+                    CourseItem()
+                        .transition(.move(edge: .leading)) // change this to set the direction your transition takes place from
+                        .edgesIgnoringSafeArea(.all)
+                }
             }
+       
         }
-        .onTapGesture {
-            show.toggle() // this will toggle a boolean value ie between false and true
+        .onTapGesture { //on tapping the card
+            
+            withAnimation(.spring()){ // the spring() gives it a nice boucing effect
+                
+                show.toggle() // this will toggle a boolean value ie between false and true
+            }
+           
         }
-        .animation(.easeIn)
+       // .animation(.spring())
        
     }
 }
