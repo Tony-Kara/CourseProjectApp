@@ -16,6 +16,9 @@
 		040AEC2026D7DDB7008B2F4F /* CourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */; };
 		040AEC2226D7EEDA008B2F4F /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC2126D7EEDA008B2F4F /* CoursesView.swift */; };
 		040AEC2426D7F377008B2F4F /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC2326D7F377008B2F4F /* SideBar.swift */; };
+		040AEC2526D94E09008B2F4F /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC2326D7F377008B2F4F /* SideBar.swift */; };
+		040AEC2626D94E33008B2F4F /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC2126D7EEDA008B2F4F /* CoursesView.swift */; };
+		040AEC2726D94E3E008B2F4F /* CourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,11 +66,11 @@
 		040AEBFD26D7C12C008B2F4F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				040AEBFE26D7C12C008B2F4F /* CodeWithDesignAppApp.swift */,
+				040AEBFF26D7C12C008B2F4F /* ContentView.swift */,
 				040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */,
 				040AEC2126D7EEDA008B2F4F /* CoursesView.swift */,
 				040AEC2326D7F377008B2F4F /* SideBar.swift */,
-				040AEBFE26D7C12C008B2F4F /* CodeWithDesignAppApp.swift */,
-				040AEBFF26D7C12C008B2F4F /* ContentView.swift */,
 				040AEC0026D7C132008B2F4F /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -209,7 +212,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				040AEC1426D7C132008B2F4F /* ContentView.swift in Sources */,
+				040AEC2526D94E09008B2F4F /* SideBar.swift in Sources */,
 				040AEC1226D7C132008B2F4F /* CodeWithDesignAppApp.swift in Sources */,
+				040AEC2626D94E33008B2F4F /* CoursesView.swift in Sources */,
+				040AEC2726D94E3E008B2F4F /* CourseRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
