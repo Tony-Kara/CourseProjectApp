@@ -19,6 +19,7 @@
 		040AEC2526D94E09008B2F4F /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC2326D7F377008B2F4F /* SideBar.swift */; };
 		040AEC2626D94E33008B2F4F /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC2126D7EEDA008B2F4F /* CoursesView.swift */; };
 		040AEC2726D94E3E008B2F4F /* CourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */; };
+		040AEC2926D960D2008B2F4F /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040AEC2826D960D1008B2F4F /* CourseItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRow.swift; sourceTree = "<group>"; };
 		040AEC2126D7EEDA008B2F4F /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		040AEC2326D7F377008B2F4F /* SideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBar.swift; sourceTree = "<group>"; };
+		040AEC2826D960D1008B2F4F /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +69,11 @@
 			isa = PBXGroup;
 			children = (
 				040AEBFE26D7C12C008B2F4F /* CodeWithDesignAppApp.swift */,
-				040AEBFF26D7C12C008B2F4F /* ContentView.swift */,
+				040AEC2A26D9636F008B2F4F /* Navigation */,
 				040AEC1F26D7DDB7008B2F4F /* CourseRow.swift */,
 				040AEC2126D7EEDA008B2F4F /* CoursesView.swift */,
 				040AEC2326D7F377008B2F4F /* SideBar.swift */,
+				040AEC2826D960D1008B2F4F /* CourseItem.swift */,
 				040AEC0026D7C132008B2F4F /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -100,6 +103,14 @@
 				040AEC1026D7C132008B2F4F /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		040AEC2A26D9636F008B2F4F /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				040AEBFF26D7C12C008B2F4F /* ContentView.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				040AEC2426D7F377008B2F4F /* SideBar.swift in Sources */,
+				040AEC2926D960D2008B2F4F /* CourseItem.swift in Sources */,
 				040AEC1326D7C132008B2F4F /* ContentView.swift in Sources */,
 				040AEC2026D7DDB7008B2F4F /* CourseRow.swift in Sources */,
 				040AEC1126D7C132008B2F4F /* CodeWithDesignAppApp.swift in Sources */,

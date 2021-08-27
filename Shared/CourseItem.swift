@@ -1,14 +1,15 @@
 //
-//  ContentView.swift
-//  Shared
+//  CourseItem.swift
+//  CodeWithDesignApp (iOS)
 //
-//  Created by mac on 8/26/21.
+//  Created by mac on 8/28/21.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct CourseItem: View {
     var body: some View {
+        
         VStack(alignment: .leading, spacing: 4.0) {
             Spacer() // this spacer pushed the image down
             HStack {
@@ -32,17 +33,11 @@ struct ContentView: View {
         .background(Color.blue)
         .cornerRadius(20.0)
         .shadow(radius: 10)
-        
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CourseItem_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ContentView()
-            ContentView()
-                .previewLayout(.fixed(width: /*@START_MENU_TOKEN@*/200.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/200.0/*@END_MENU_TOKEN@*/))
-                .preferredColorScheme(.dark)
-        }
+        CourseItem()
     }
 }

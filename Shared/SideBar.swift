@@ -14,9 +14,28 @@ struct SideBar: View {
             #if os(iOS)
             content
                 .navigationTitle("Learn") // the navigation title is only appropriate for iOS and not mac
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Image(systemName: "person.crop.circle")
+                    }
+                
+                }
             #else
             content
-                .frame(minWidth: 200, idealWidth: 250, maxWidth: .infinity, maxHeight: .infinity)
+                .frame(minWidth: 200, idealWidth: 250, maxWidth: .infinity, maxHeight: .infinity)// put in mind, it makes no sense to put in fix width and height for iOS and iPad as they adjust dynamically.
+                .toolbar {
+                    ToolbarItem(placement: .automatic) {
+                        
+                        Button(action: {}){
+                            Image(systemName: "person.crop.circle")
+                        }
+                        
+                         
+                        
+                    }
+                    
+                  
+                }
             #endif
             
             CoursesView() // adding this here ensures that my view displays these  contents  on first loading up.
