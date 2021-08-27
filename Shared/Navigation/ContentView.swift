@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ViewBuilder
     var body: some View {
+       
         #if os(iOS)
         SideBar()
         #else
