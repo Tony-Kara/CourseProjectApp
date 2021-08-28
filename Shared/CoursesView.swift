@@ -30,7 +30,14 @@ struct CoursesView: View {
                     }
                     .padding()
                 }
-                .transition(.opacity) // change this to set the direction your transition takes place from ie movement of your view
+                .transition( // change this to set the direction your transition takes place from ie movement of your view,
+                    .asymmetric(insertion: AnyTransition
+                                    .opacity
+                                    .animation(Animation.spring().delay(0.3)),
+                                removal: AnyTransition
+                                    .opacity
+                                    .animation(.spring())) //asymmetric ensure that transiton in and out can occur at different time, example insertion has delay and removal has no delay or value type of AnyTransition
+                    )
                 .edgesIgnoringSafeArea(.all)
             }
             
