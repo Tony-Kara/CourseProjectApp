@@ -8,31 +8,32 @@
 import SwiftUI
 
 struct CourseItem: View {
+    var course: Course = courses[0] // this is my model
     var body: some View {
         
         VStack(alignment: .leading, spacing: 4.0) {
             Spacer() // this spacer pushed the image down
             HStack {
                 Spacer()
-                Image("Illustration 1")
+                Image(course.image)
                     .resizable() // will ensure the image uses all available space
                     .aspectRatio(contentMode: .fit)
                 Spacer()
             }
-            Text("SwiftUI for iOS 14")
+            Text(course.title)
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
                 
-            Text("20 sections")
+            Text(course.subtitle)
                 .font(.footnote)
                 .foregroundColor(Color.white)
                 
                 
         }
         .padding(.all)
-        .background(Color.blue)
-        .cornerRadius(20.0)
-        .shadow(radius: 10)
+        .background(course.color)
+        .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
+        .shadow(color: course.color.opacity(0.3), radius: 20, x: 0, y: 10 )
     }
 }
 

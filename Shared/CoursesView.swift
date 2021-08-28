@@ -14,12 +14,13 @@ struct CoursesView: View {
         ZStack {
             ScrollView {
                 VStack(spacing: 20) {
-                    CourseItem() //3rd card
-                        .matchedGeometryEffect(id: "Card", in: namespace, isSource: !show) //always ensure you add the ".matchedGeometryEffect" before the frame
-                        .frame(width: 335, height: 250)
+                    ForEach(courses) { item in // the 'ForEach' here is a repeat, meaning all the courses in the array model that was created will be repeated here
+                        CourseItem(course: item) // the courses was passed as a parameter to the CourseItem struct.
+                            .matchedGeometryEffect(id: item.id, in: namespace, isSource: !show) //always ensure you add the ".matchedGeometryEffect" before the frame, the 'item.id' will be generated and will be used in placing all the cards
+                            .frame(width: 335, height: 250)
+                    }
                     
-                    CourseItem()
-                        .frame(width: 335, height: 250)
+                    
                 }
                 .frame(maxWidth: .infinity)
             }
@@ -27,8 +28,8 @@ struct CoursesView: View {
             
             if show { // this is set to false by default and will not show by default
                 ScrollView {
-                    CourseItem() // this will only show on taping the card, it will show with 20 courseRow(), it's the first card but hidden by default
-                        .matchedGeometryEffect(id: "Card", in: namespace)
+                    CourseItem(course: courses[0]) // this will only show on taping the card, it will show with 20 courseRow(), it's the first card but hidden by default
+                        .matchedGeometryEffect(id: courses[0].id, in: namespace)
                         .frame(height: 300) // after matchedGeometricEffect, the frame will reset to 300
                     
                     VStack {
