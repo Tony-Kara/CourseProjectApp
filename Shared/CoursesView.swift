@@ -12,16 +12,17 @@ struct CoursesView: View {
     @Namespace var namespace // a namespace is where you set a collection of match elements
     var body: some View {
         ZStack {
-            VStack(spacing: 20) {
-                CourseItem() //3rd card
-                    .matchedGeometryEffect(id: "Card", in: namespace, isSource: !show) //always ensure you add the ".matchedGeometryEffect" before the frame
-                    .frame(width: 335, height: 250)
-                
-                
-                CourseItem() // 2nd card
-                    .frame(width: 335, height: 250)
+            ScrollView {
+                VStack(spacing: 20) {
+                    CourseItem() //3rd card
+                        .matchedGeometryEffect(id: "Card", in: namespace, isSource: !show) //always ensure you add the ".matchedGeometryEffect" before the frame
+                        .frame(width: 335, height: 250)
+                    
+                    CourseItem()
+                        .frame(width: 335, height: 250)
+                }
+                .frame(maxWidth: .infinity)
             }
-            .frame(maxWidth: .infinity)
             
             
             if show { // this is set to false by default and will not show by default
