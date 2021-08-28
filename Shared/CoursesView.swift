@@ -12,14 +12,21 @@ struct CoursesView: View {
     @Namespace var namespace // a namespace is where you set a collection of match elements
     var body: some View {
         ZStack {
-            CourseItem()
-                .matchedGeometryEffect(id: "Card", in: namespace, isSource: !show) //always ensure you add the ".matchedGeometryEffect" before the frame
-                .frame(width: 335, height: 250)
+            VStack(spacing: 20) {
+                CourseItem() //3rd card
+                    .matchedGeometryEffect(id: "Card", in: namespace, isSource: !show) //always ensure you add the ".matchedGeometryEffect" before the frame
+                    .frame(width: 335, height: 250)
+                
+                
+                CourseItem() // 2nd card
+                    .frame(width: 335, height: 250)
+            }
+            .frame(maxWidth: .infinity)
             
             
             if show { // this is set to false by default and will not show by default
                 ScrollView {
-                    CourseItem()
+                    CourseItem() // this will only show on taping the card, it will show with 20 courseRow(), it's the first card but hidden by default
                         .matchedGeometryEffect(id: "Card", in: namespace)
                         .frame(height: 300) // after matchedGeometricEffect, the frame will reset to 300
                     
@@ -30,13 +37,14 @@ struct CoursesView: View {
                     }
                     .padding()
                 }
+                .background(Color("Background 1")) // this is white for light mode and black for dark mode, so immediately the show screen comes up, it will have a white background for light mode.
                 .transition( // change this to set the direction your transition takes place from ie movement of your view,
                     .asymmetric(insertion: AnyTransition
                                     .opacity
                                     .animation(Animation.spring().delay(0.3)),
                                 removal: AnyTransition
                                     .opacity
-                                    .animation(.spring())) //asymmetric ensure that transiton in and out can occur at different time, example insertion has delay and removal has no delay or value type of AnyTransition
+                                    .animation(.spring())) //asymmetric ensure that transiton in and out can occur at different time, example insertion has delay and removal has no delay or value type of Animation.spring()
                     )
                 .edgesIgnoringSafeArea(.all)
             }
