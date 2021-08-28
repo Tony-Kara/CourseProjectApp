@@ -16,16 +16,24 @@ struct CoursesView: View {
                 .matchedGeometryEffect(id: "Card", in: namespace, isSource: !show) //always ensure you add the ".matchedGeometryEffect" before the frame
                 .frame(width: 335, height: 250)
             
-            VStack {
-                
-                if show { // this is set to false by default and will not show by default
+            
+            if show { // this is set to false by default and will not show by default
+                ScrollView {
                     CourseItem()
                         .matchedGeometryEffect(id: "Card", in: namespace)
-                        .transition(.opacity) // change this to set the direction your transition takes place from ie movement of your view
-                        .edgesIgnoringSafeArea(.all)
+                        .frame(height: 300) // after matchedGeometricEffect, the frame will reset to 300
+                    
+                    VStack {
+                        ForEach(0 ..< 20) { item in // add repeat, this will repeat the current CourseRow()
+                            CourseRow()
+                        }
+                    }
+                    .padding()
                 }
+                .transition(.opacity) // change this to set the direction your transition takes place from ie movement of your view
+                .edgesIgnoringSafeArea(.all)
             }
-       
+            
         }
         .onTapGesture { //on tapping the card, we want a transition with animation
             
@@ -33,10 +41,10 @@ struct CoursesView: View {
                 
                 show.toggle() // this will toggle a boolean value ie between false and true which makes the transtion occur
             }
-           
+            
         }
-       // .animation(.spring())
-       
+        // .animation(.spring())
+        
     }
 }
 
